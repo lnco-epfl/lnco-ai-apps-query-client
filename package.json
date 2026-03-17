@@ -16,13 +16,14 @@
     }
   },
   "sideEffects": false,
-  "repository": "git@github.com:graasp/graasp-apps-query-client.git",
-  "author": "Graasp",
+  "repository": "git@github.com:lnco-epfl/lnco-ai-apps-query-client.git",
+  "author": "LNCO-AI Team",
   "contributors": [
     "Kim Lan Phan Hoang",
     "Basile Spaenlehauer",
     "Jérémy La Scala",
-    "Thibault Reidy"
+    "Thibault Reidy",
+    "Yannick Mijsters"
   ],
   "license": "AGPL3.0-only",
   "scripts": {
@@ -102,7 +103,7 @@
     "vitest": "3.2.4"
   },
   "peerDependencies": {
-    "@graasp/sdk": "^4.22.0 || ^5.0.0",
+    "@graasp/sdk": "*",
     "@mui/icons-material": "^5.15.5 || ^6.0.0",
     "@mui/material": "^5.15.5 || ^6.0.0",
     "@tanstack/react-query": "^4.28.0",

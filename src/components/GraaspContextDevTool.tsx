@@ -17,11 +17,12 @@ import {
   ToggleButtonGroup,
 } from '@mui/material';
 
-import { Context, HttpMethod, LocalContext, Member, PermissionLevel } from '@graasp/sdk';
+import { Context, HttpMethod, Member, PermissionLevel } from '@graasp/sdk';
 
 import { useQueryClient } from '@tanstack/react-query';
 
 import { LOCAL_CONTEXT_KEY } from '../config/keys.js';
+import { LocalContext } from '../types.js';
 import { UpdateArgument } from './utils/hooks.js';
 import { TokenContext } from './withToken.js';
 

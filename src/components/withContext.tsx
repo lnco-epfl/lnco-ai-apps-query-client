@@ -3,11 +3,12 @@ import React, { type JSX, type ReactElement, createContext, useContext } from 'r
 import { Refresh } from '@mui/icons-material';
 import { Button, Stack, Typography } from '@mui/material';
 
-import { Context, LocalContext, PermissionLevel } from '@graasp/sdk';
+import { Context, PermissionLevel } from '@graasp/sdk';
 
 import { UseQueryResult } from '@tanstack/react-query';
 
 import { AutoResizer } from './AutoResizer.js';
+import { LocalContext } from '../types.js';
 
 export const defaultContextValue: LocalContext = {
   apiHost: '',

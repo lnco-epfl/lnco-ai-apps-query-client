@@ -7,6 +7,7 @@ import {
   Member,
   UUID,
 } from '@graasp/sdk';
+import type { LocalContext as GraaspLocalContext } from '@graasp/sdk';
 
 export type Notifier = (e: {
   type: string;
@@ -65,6 +66,18 @@ export type WindowPostMessage = (message: unknown) => void;
 export type AppContext = {
   item: DiscriminatedItem;
   members: Member[];
+};
+
+export type ScreenCalibrationFontSize = 'small' | 'normal' | 'large' | 'extra-large';
+
+export type ScreenCalibration = {
+  scale?: number;
+  fontSize?: ScreenCalibrationFontSize;
+  [key: string]: unknown;
+};
+
+export type LocalContext = GraaspLocalContext & {
+  screenCalibration?: ScreenCalibration;
 };
 
 export interface ApiData {

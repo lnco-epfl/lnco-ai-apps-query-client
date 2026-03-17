@@ -5,13 +5,12 @@ import {
   CompleteMember,
   Context,
   ItemType,
-  LocalContext,
   MemberFactory,
   PermissionLevel,
 } from '@graasp/sdk';
 
 import { buildContext } from '../hooks/postMessage.js';
-import { Database } from '../types.js';
+import { Database, LocalContext } from '../types.js';
 
 export const MOCK_SERVER_MEMBER: CompleteMember = MemberFactory({
   id: 'mock-member-id',
