@@ -4,8 +4,6 @@
  */
 import { useEffect } from 'react';
 
-import { LocalContext } from '@graasp/sdk';
-
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import debounce from 'lodash.debounce';
 
@@ -20,7 +18,7 @@ import { MissingMessageChannelPortError } from '../config/errors.js';
 import { AUTH_TOKEN_KEY, LOCAL_CONTEXT_KEY, buildPostMessageKeys } from '../config/keys.js';
 import { buildAppKeyAndOriginPayload } from '../config/utils.js';
 import { getAuthTokenRoutine, getLocalContextRoutine } from '../routines/index.js';
-import { QueryClientConfig, WindowPostMessage } from '../types.js';
+import { LocalContext, QueryClientConfig, WindowPostMessage } from '../types.js';
 
 // build context from given data and default values
 export const buildContext = (payload: LocalContext): LocalContext => {
@@ -35,6 +33,7 @@ export const buildContext = (payload: LocalContext): LocalContext => {
     dev = false,
     mobile = false,
     settings = {},
+    screenCalibration,
   } = payload;
 
   const standalone = context === null;
@@ -50,6 +49,7 @@ export const buildContext = (payload: LocalContext): LocalContext => {
     mobile,
     standalone,
     settings,
+    ...(screenCalibration !== undefined ? { screenCalibration } : {}),
   };
 };
 

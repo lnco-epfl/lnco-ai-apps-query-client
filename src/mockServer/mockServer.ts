@@ -1,6 +1,4 @@
-import { LocalContext } from '@graasp/sdk';
-
-import { Database } from '../types.js';
+import { Database, LocalContext } from '../types.js';
 import { buildDatabase, buildMockLocalContext } from './fixtures.js';
 import { mockMirageServer } from './mirage/server.js';
 import { mockServiceWorkerServer } from './msw/server.js';

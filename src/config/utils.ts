@@ -1,9 +1,7 @@
-import { LocalContext } from '@graasp/sdk';
-
 import { QueryClient } from '@tanstack/react-query';
 import { StatusCodes } from 'http-status-codes';
 
-import { QueryClientConfig } from '../types.js';
+import { LocalContext, QueryClientConfig } from '../types.js';
 import {
   MissingAppKeyError,
   MissingAppOriginError,

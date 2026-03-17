@@ -4,7 +4,6 @@ import {
   AppDataVisibility,
   AppSetting,
   DiscriminatedItem,
-  LocalContext,
   Member,
   PermissionLevel,
   PermissionLevelOptions,
@@ -14,7 +13,7 @@ import { HttpResponse, RequestHandler, http } from 'msw';
 import { v4 } from 'uuid';
 
 import { API_ROUTES, buildUploadAppSettingFilesRoute } from '../../api/routes.js';
-import { Database, MockAppSetting } from '../../types.js';
+import { Database, LocalContext, MockAppSetting } from '../../types.js';
 import { AppMocks } from './dexie-db.js';
 
 const {
