@@ -35,6 +35,7 @@ export const buildContext = (payload: LocalContext): LocalContext => {
     dev = false,
     mobile = false,
     settings = {},
+    screenCalibration,
   } = payload;
 
   const standalone = context === null;
@@ -50,6 +51,7 @@ export const buildContext = (payload: LocalContext): LocalContext => {
     mobile,
     standalone,
     settings,
+    ...(screenCalibration !== undefined ? { screenCalibration } : {}),
   };
 };
 

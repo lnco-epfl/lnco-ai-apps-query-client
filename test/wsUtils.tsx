@@ -4,6 +4,7 @@ import { QueryClient } from '@tanstack/react-query';
 import { renderHook } from '@testing-library/react';
 import { vi } from 'vitest';
 
+import { DEBOUNCE_TIME_AUTORESIZE } from '../src/config/constants.js';
 import configureQueryClient from '../src/queryClient.js';
 import { Notifier, QueryClientConfig } from '../src/types.js';
 import { Channel } from '../src/ws/ws-client.js';
@@ -58,6 +59,7 @@ export const setUpWsTest = (args?: {
     refetchOnWindowFocus: false,
     keepPreviousData: true,
     isStandalone: false,
+    debounceTimeAutoResize: DEBOUNCE_TIME_AUTORESIZE,
   };
 
   const { QueryClientProvider, useMutation } = configureQueryClient(queryConfig);

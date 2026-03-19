@@ -1060,7 +1060,7 @@ __metadata:
     "@eslint/compat": "npm:1.2.3"
     "@eslint/eslintrc": "npm:3.2.0"
     "@eslint/js": "npm:9.15.0"
-    "@graasp/sdk": "npm:5.3.0"
+    "@graasp/sdk": "github:lnco-epfl/graasp-sdk"
     "@mui/icons-material": "npm:6.1.7"
     "@mui/material": "npm:6.1.7"
     "@tanstack/react-query": "npm:4.36.1"
@@ -1120,9 +1120,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@graasp/sdk@npm:5.3.0":
-  version: 5.3.0
-  resolution: "@graasp/sdk@npm:5.3.0"
+"@graasp/sdk@github:lnco-epfl/graasp-sdk":
+  version: 5.5.0
+  resolution: "@graasp/sdk@https://github.com/lnco-epfl/graasp-sdk.git#commit=605a312a77f432d250dcf00a32773e280cd0c2da"
   dependencies:
     "@faker-js/faker": "npm:9.2.0"
     filesize: "npm:10.1.6"
@@ -1130,7 +1130,7 @@ __metadata:
   peerDependencies:
     date-fns: ^3 || ^4.0.0
     uuid: ^9 || ^10 || ^11.0.0
-  checksum: 10/abd215fb0ae4a80ff8ae1237cbcb3f4b14f8fc912258a64f0b0971d606dbd5723937c940b94c2f722ee254f90eb1d9edf911258f6bea0e2e0ee6af32934e3e5a
+  checksum: 10/91f004ead4501e1a69d3b35bc5ba92476562d2385c9f507c37e095f619d313bebf8781722f47eb02d8692012820ce9e9c8e3b38509c4026d929590d13b89f8b4
   languageName: node
   linkType: hard
 

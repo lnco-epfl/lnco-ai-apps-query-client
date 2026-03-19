@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Unreleased
+
+### Notes
+
+* test workaround: explicitly set `debounceTimeAutoResize` in test query client config builders (`test/utils.tsx`, `test/wsUtils.tsx`) to satisfy `QueryClientConfig` typing. This is a compatibility workaround and not a runtime behavior change.
+
 ## [3.7.3](https://github.com/graasp/graasp-apps-query-client/compare/v3.7.2...v3.7.3) (2024-11-19)
 
 
