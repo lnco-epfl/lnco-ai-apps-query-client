@@ -35,13 +35,13 @@ const {
   buildPostChatBotRoute,
 } = API_ROUTES;
 
-const getMemberIdFromToken = (bearer: string | null): string => {
+const getAccountIdFromToken = (bearer: string | null): string => {
   if (!bearer) {
     throw new Error('no bearer token');
   }
   const accountId = bearer.split(' ').at(-1);
   if (!accountId) {
-    throw new Error('Unable to extract memberId from token');
+    throw new Error('Unable to extract accountId from token');
   }
   return accountId;
 };
@@ -92,7 +92,7 @@ export const buildMSWMocks = (
       const reqItemId = params.itemId;
       const dataType = new URL(request.url).searchParams.get('type');
 
-      const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+      const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
       const permission = await getPermissionForMember(memberId);
       let value;
       if (permission === PermissionLevel.Admin) {
@@ -129,7 +129,7 @@ export const buildMSWMocks = (
       async ({ request, params }) => {
         const reqItemId = params.itemId;
         const item = await getItemFromId(reqItemId as string);
-        const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+        const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
         const account = await getMemberFromId(memberId);
 
         const body = (await request.json()) as Pick<AppData, 'data' | 'type'> & {
@@ -213,7 +213,7 @@ export const buildMSWMocks = (
       async ({ params, request }) => {
         const reqItemId = params.itemId;
         const item = await getItemFromId(reqItemId as string);
-        const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+        const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
         const member = await getMemberFromId(memberId);
         const permission = await getPermissionForMember(memberId);
 
@@ -247,7 +247,7 @@ export const buildMSWMocks = (
       async ({ params, request }) => {
         const { id } = params;
 
-        const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+        const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
         const permission = await getPermissionForMember(memberId);
 
         // when member is not an admin -> return an error
@@ -276,7 +276,7 @@ export const buildMSWMocks = (
       async ({ params, request }) => {
         const { id } = params;
 
-        const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+        const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
         const permission = await getPermissionForMember(memberId);
 
         // when member is not an admin -> return an error
@@ -310,7 +310,7 @@ export const buildMSWMocks = (
       }
 
       const item = await getItemFromId(itemId as string);
-      const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+      const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
       const member = await getMemberFromId(memberId);
       const permission = await getPermissionForMember(memberId);
 
@@ -374,7 +374,7 @@ export const buildMSWMocks = (
 
     // GET /app-items/:itemId/app-action
     http.get(`${apiHost}/${buildGetAppActionsRoute(':itemId')}`, async ({ request }) => {
-      const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+      const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
       const permission = await getPermissionForMember(memberId);
       let value;
       switch (permission) {
@@ -398,7 +398,7 @@ export const buildMSWMocks = (
       async ({ params, request }) => {
         const reqItemId = params.itemId;
         const item = await getItemFromId(reqItemId as string);
-        const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+        const memberId = getAccountIdFromToken(request.headers.get('Authorization'));
         const account = await getMemberFromId(memberId);
 
         const body = (await request.json()) as Pick<AppAction, 'data' | 'type'>;
@@ -450,16 +450,16 @@ export const buildMSWMocks = (
       return new HttpResponse();
     }),
     http.get('/__mocks/context', async ({ request }) => {
-      const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
-      const value = await db.appContext.where('memberId').equals(memberId).first();
+      const accountId = getAccountIdFromToken(request.headers.get('Authorization'));
+      const value = await db.appContext.get(accountId);
       return HttpResponse.json(value);
     }),
     http.post('/__mocks/context', async ({ request }) => {
-      const memberId = getMemberIdFromToken(request.headers.get('Authorization'));
+      const accountId = getAccountIdFromToken(request.headers.get('Authorization'));
       const body = (await request.json()) as Partial<LocalContext>;
-      await db.appContext.update(memberId, body);
+      await db.appContext.update(accountId, body);
 
-      const value = await db.appContext.where('memberId').equals(memberId).first();
+      const value = await db.appContext.get(accountId);
       return HttpResponse.json(value);
     }),
   ];
