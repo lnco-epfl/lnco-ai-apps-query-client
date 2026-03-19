@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 import { HttpMethod } from '@graasp/sdk';
 
@@ -9,10 +9,11 @@ import nock, { InterceptFunction, ReplyHeaders, Scope } from 'nock';
 import { v4 } from 'uuid';
 import { expect, vi } from 'vitest';
 
-import configureHooks from '../src/hooks';
-import configureQueryClient from '../src/queryClient';
-import { Notifier, QueryClientConfig } from '../src/types';
-import { API_HOST, MOCK_APP_ORIGIN, RequestMethods, WS_HOST } from './constants';
+import configureHooks from '../src/hooks/index.js';
+import configureQueryClient from '../src/queryClient.js';
+import { DEBOUNCE_TIME_AUTORESIZE } from '../src/config/constants.js';
+import { Notifier, QueryClientConfig } from '../src/types.js';
+import { API_HOST, MOCK_APP_ORIGIN, RequestMethods, WS_HOST } from './constants.js';
 
 type Args = { enableWebsocket?: boolean; notifier?: Notifier; GRAASP_APP_KEY?: string };
 
@@ -36,6 +37,7 @@ export const setUpTest = (args?: Args) => {
     WS_HOST,
     enableWebsocket: false,
     isStandalone: false,
+    debounceTimeAutoResize: DEBOUNCE_TIME_AUTORESIZE,
   };
 
   const { queryClient, QueryClientProvider, mutations, useMutation } =
@@ -44,7 +46,7 @@ export const setUpTest = (args?: Args) => {
   // configure hooks
   const hooks = configureHooks(queryConfig);
 
-  const wrapper = ({ children }: { children: React.ReactNode }): JSX.Element => (
+  const wrapper = ({ children }: { children: ReactNode }): JSX.Element => (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 

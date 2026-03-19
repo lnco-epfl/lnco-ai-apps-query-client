@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Unreleased
+
+### Notes
+
+* test workaround: explicitly set `debounceTimeAutoResize` in test query client config builders (`test/utils.tsx`, `test/wsUtils.tsx`) to satisfy `QueryClientConfig` typing. This is a compatibility workaround and not a runtime behavior change.
+
+## [3.7.3](https://github.com/graasp/graasp-apps-query-client/compare/v3.7.2...v3.7.3) (2024-11-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dexie to v4.0.10 ([#443](https://github.com/graasp/graasp-apps-query-client/issues/443)) ([5d8f737](https://github.com/graasp/graasp-apps-query-client/commit/5d8f7376c79b330169c1da31fae46a0c991334ff))
+* **deps:** update dependency msw to v2.6.5 ([#439](https://github.com/graasp/graasp-apps-query-client/issues/439)) ([4384b91](https://github.com/graasp/graasp-apps-query-client/commit/4384b911ef91dbfc2e0dc5df17773e371f25586a))
+* **deps:** update dependency uuid to v11.0.3 ([#441](https://github.com/graasp/graasp-apps-query-client/issues/441)) ([4162563](https://github.com/graasp/graasp-apps-query-client/commit/4162563c347fc1cb0080a3893eb45641a530d953))
+* **deps:** update mui (non-major) to v6.1.7 ([#442](https://github.com/graasp/graasp-apps-query-client/issues/442)) ([cd5d6f1](https://github.com/graasp/graasp-apps-query-client/commit/cd5d6f146974bc30b71a6de84a5db2e8960a71f8))
+
+## [3.7.2](https://github.com/graasp/graasp-apps-query-client/compare/v3.7.1...v3.7.2) (2024-11-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency msw to v2.6.0 ([#433](https://github.com/graasp/graasp-apps-query-client/issues/433)) ([e613f06](https://github.com/graasp/graasp-apps-query-client/commit/e613f0691cd0ebbf57a2b50004dd707be725b54e))
+* **deps:** update dependency uuid to v11.0.2 ([#431](https://github.com/graasp/graasp-apps-query-client/issues/431)) ([1082972](https://github.com/graasp/graasp-apps-query-client/commit/10829724a5404a6596ddc9a915384b288d11d599))
+* **deps:** update mui (non-major) to v6.1.6 ([#434](https://github.com/graasp/graasp-apps-query-client/issues/434)) ([6174688](https://github.com/graasp/graasp-apps-query-client/commit/61746886122fbf8149813ed826a0ea742d9cef4e))
+
+## [3.7.1](https://github.com/graasp/graasp-apps-query-client/compare/v3.7.0...v3.7.1) (2024-10-28)
+
+
+### Bug Fixes
+
+* debounce sendHeight ([#426](https://github.com/graasp/graasp-apps-query-client/issues/426)) ([29da0fd](https://github.com/graasp/graasp-apps-query-client/commit/29da0fd98720f63159c030ff195837e50179dfb6))
+* **deps:** update dependency dexie to v4.0.9 ([#422](https://github.com/graasp/graasp-apps-query-client/issues/422)) ([1eef64b](https://github.com/graasp/graasp-apps-query-client/commit/1eef64b7c65c7f413e1f5c69922a9adc11469e12))
+* **deps:** update dependency msw to v2.4.11 ([#418](https://github.com/graasp/graasp-apps-query-client/issues/418)) ([801b7d8](https://github.com/graasp/graasp-apps-query-client/commit/801b7d859df558b7919b72e28c1ae11f9e4d1156))
+* **deps:** update dependency msw to v2.4.13 ([#423](https://github.com/graasp/graasp-apps-query-client/issues/423)) ([24964da](https://github.com/graasp/graasp-apps-query-client/commit/24964dae49c38c1e65547bba3a7a9610ae787a32))
+* **deps:** update dependency msw to v2.4.9 ([#409](https://github.com/graasp/graasp-apps-query-client/issues/409)) ([b642353](https://github.com/graasp/graasp-apps-query-client/commit/b6423539d6b1206e33d06060c05ce0e2847713bd))
+* **deps:** update dependency msw to v2.5.2 ([#425](https://github.com/graasp/graasp-apps-query-client/issues/425)) ([3a7b06a](https://github.com/graasp/graasp-apps-query-client/commit/3a7b06a3249d570723134eb6a4f39b6c2d728eac))
+* **deps:** update dependency uuid to v11 ([#427](https://github.com/graasp/graasp-apps-query-client/issues/427)) ([42a2bbb](https://github.com/graasp/graasp-apps-query-client/commit/42a2bbb9f7ace304bd211a3e2f1f22d6ae7466fd))
+* **deps:** update mui (non-major) to v6.1.4 ([#417](https://github.com/graasp/graasp-apps-query-client/issues/417)) ([18cb8e1](https://github.com/graasp/graasp-apps-query-client/commit/18cb8e18e877eb9e616f2d97096ea9fdb01d88ae))
+* **deps:** update mui (non-major) to v6.1.5 ([#424](https://github.com/graasp/graasp-apps-query-client/issues/424)) ([d760a85](https://github.com/graasp/graasp-apps-query-client/commit/d760a85898b718821d0303525d243a9cf4b48853))
+
+## [3.7.0](https://github.com/graasp/graasp-apps-query-client/compare/v3.6.0...v3.7.0) (2024-09-19)
+
+
+### Features
+
+* build with typescript ([#402](https://github.com/graasp/graasp-apps-query-client/issues/402)) ([41dccc9](https://github.com/graasp/graasp-apps-query-client/commit/41dccc9ccc04f12e50005632d845af01a6423987))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/react to v11.13.3 ([#390](https://github.com/graasp/graasp-apps-query-client/issues/390)) ([faa0800](https://github.com/graasp/graasp-apps-query-client/commit/faa0800efb045471d444766af9bb5716d1dabe35))
+* **deps:** update dependency axios to v1.7.7 ([#388](https://github.com/graasp/graasp-apps-query-client/issues/388)) ([ff450f7](https://github.com/graasp/graasp-apps-query-client/commit/ff450f7eec1ada83a77da9ba88d0b09f597f4981))
+* **deps:** update dependency msw to v2.4.8 ([#397](https://github.com/graasp/graasp-apps-query-client/issues/397)) ([a4c1313](https://github.com/graasp/graasp-apps-query-client/commit/a4c1313cb8c969bbf0c6294c2d9bfd9eae9890b4))
+* **deps:** update mui (non-major) to v5.16.7 ([#385](https://github.com/graasp/graasp-apps-query-client/issues/385)) ([fde31a9](https://github.com/graasp/graasp-apps-query-client/commit/fde31a925f4a9e503ce8869620a8b740d2ae6449))
+* move sdk to peer dependency ([#398](https://github.com/graasp/graasp-apps-query-client/issues/398)) ([3ffc5ac](https://github.com/graasp/graasp-apps-query-client/commit/3ffc5ac465ba7178271b254a47d545f644d76ace))
+* update release-please workflow ([052576e](https://github.com/graasp/graasp-apps-query-client/commit/052576ee5bd54b8be77826f9f7550c8829f2184d))
+
+## [3.6.0](https://github.com/graasp/graasp-apps-query-client/compare/v3.5.2...v3.6.0) (2024-09-17)
+
+
+### Features
+
+* update for account ([#395](https://github.com/graasp/graasp-apps-query-client/issues/395)) ([d40fe83](https://github.com/graasp/graasp-apps-query-client/commit/d40fe83d5c0339728916ee0cf570eccf6e338e23))
+
 ## [3.5.2](https://github.com/graasp/graasp-apps-query-client/compare/v3.5.1...v3.5.2) (2024-09-12)
 
 

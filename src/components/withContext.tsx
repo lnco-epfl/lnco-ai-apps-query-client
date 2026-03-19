@@ -3,17 +3,16 @@ import React, { ReactElement, createContext, useContext } from 'react';
 import { Refresh } from '@mui/icons-material';
 import { Button, Stack, Typography } from '@mui/material';
 
-import { Context, PermissionLevel } from '@graasp/sdk';
+import { Context, LocalContext, PermissionLevel } from '@graasp/sdk';
 
 import { UseQueryResult } from '@tanstack/react-query';
 
-import { LocalContext } from '../types';
-import { AutoResizer } from './AutoResizer';
+import { AutoResizer } from './AutoResizer.js';
 
 export const defaultContextValue: LocalContext = {
   apiHost: '',
   itemId: '',
-  memberId: '',
+  accountId: '',
   settings: {},
   mobile: false,
   dev: false,
@@ -32,7 +31,7 @@ interface WithLocalContextProps {
     itemId: string,
     defaultValue: LocalContext,
   ) => UseQueryResult<LocalContext, unknown>;
-  LoadingComponent?: React.ReactElement;
+  LoadingComponent?: ReactElement;
   defaultValue: LocalContext;
   onError?: (error: unknown) => void;
   useAutoResize?: (itemId: string) => void;

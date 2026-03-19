@@ -12,16 +12,16 @@ import {
   UNAUTHORIZED_RESPONSE,
   buildAppData,
   buildMockLocalContext,
-} from '../../test/constants';
-import { mockMutation, setUpTest, waitForMutation } from '../../test/utils';
+} from '../../test/constants.js';
+import { mockMutation, setUpTest, waitForMutation } from '../../test/utils.js';
 import {
   buildDeleteAppDataRoute,
   buildPatchAppDataRoute,
   buildPostAppDataRoute,
-} from '../api/routes';
-import { MOCK_TOKEN } from '../config/constants';
-import { AUTH_TOKEN_KEY, LOCAL_CONTEXT_KEY, appDataKeys } from '../config/keys';
-import { patchAppDataRoutine, postAppDataRoutine } from '../routines';
+} from '../api/routes.js';
+import { MOCK_TOKEN } from '../config/constants.js';
+import { AUTH_TOKEN_KEY, LOCAL_CONTEXT_KEY, appDataKeys } from '../config/keys.js';
+import { patchAppDataRoutine, postAppDataRoutine } from '../routines/index.js';
 
 const mockedNotifier = vi.fn();
 const { wrapper, queryClient, mutations } = setUpTest({
@@ -151,12 +151,12 @@ describe('Apps Mutations', () => {
         // since the itemid is not defined, we do not check data for its key
       });
 
-      it('Throw if memberId is undefined', async () => {
+      it('Throw if accountId is undefined', async () => {
         // set necessary data
         queryClient.setQueryData(AUTH_TOKEN_KEY, MOCK_TOKEN);
         queryClient.setQueryData(LOCAL_CONTEXT_KEY, {
           ...buildMockLocalContext({ itemId }),
-          memberId: null,
+          accountId: null,
         });
         queryClient.setQueryData(key, initData);
 
@@ -345,12 +345,12 @@ describe('Apps Mutations', () => {
         // since the itemid is not defined, we do not check data for its key
       });
 
-      it('Throw if memberId is undefined', async () => {
+      it('Throw if accountId is undefined', async () => {
         // set necessary data
         queryClient.setQueryData(AUTH_TOKEN_KEY, MOCK_TOKEN);
         queryClient.setQueryData(LOCAL_CONTEXT_KEY, {
           ...buildMockLocalContext({ itemId }),
-          memberId: null,
+          accountId: null,
         });
         queryClient.setQueryData(key, initData);
 
@@ -525,12 +525,12 @@ describe('Apps Mutations', () => {
         // since the itemid is not defined, we do not check data for its key
       });
 
-      it('Throw if memberId is undefined', async () => {
+      it('Throw if accountId is undefined', async () => {
         // set necessary data
         queryClient.setQueryData(AUTH_TOKEN_KEY, MOCK_TOKEN);
         queryClient.setQueryData(LOCAL_CONTEXT_KEY, {
           ...buildMockLocalContext({ itemId }),
-          memberId: null,
+          accountId: null,
         });
 
         const initData = [toDelete];

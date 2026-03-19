@@ -2,11 +2,11 @@ import { AppAction } from '@graasp/sdk';
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import * as Api from '../api';
-import { appActionKeys } from '../config/keys';
-import { getApiHost, getData, getDataOrThrow } from '../config/utils';
-import { postAppActionRoutine } from '../routines';
-import { QueryClientConfig } from '../types';
+import * as Api from '../api/index.js';
+import { appActionKeys } from '../config/keys.js';
+import { getApiHost, getData, getDataOrThrow } from '../config/utils.js';
+import { postAppActionRoutine } from '../routines/index.js';
+import { QueryClientConfig } from '../types.js';
 
 export default (queryConfig: QueryClientConfig) => {
   const { enableWebsocket } = queryConfig;
@@ -14,7 +14,7 @@ export default (queryConfig: QueryClientConfig) => {
   const usePostAppAction = () => {
     const queryClient = useQueryClient();
     return useMutation(
-      (payload: Partial<AppAction>) => {
+      (payload: Pick<AppAction, 'type' | 'data'>) => {
         const apiHost = getApiHost(queryClient);
         const data = getDataOrThrow(queryClient);
         return Api.postAppAction({ ...data, body: payload, apiHost });
