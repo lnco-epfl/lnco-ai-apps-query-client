@@ -1,4 +1,4 @@
-import { Context } from '@graasp/sdk';
+import { Context } from '@lnco-ai/sdk';
 
 import { renderHook } from '@testing-library/react';
 import { v4 } from 'uuid';

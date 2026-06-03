@@ -3,7 +3,7 @@ import React, { ReactElement, createContext, useContext } from 'react';
 import { Refresh } from '@mui/icons-material';
 import { Button, Stack, Typography } from '@mui/material';
 
-import { Context, LocalContext, PermissionLevel } from '@graasp/sdk';
+import { Context, LocalContext, PermissionLevel } from '@lnco-ai/sdk';
 
 import { UseQueryResult } from '@tanstack/react-query';
 

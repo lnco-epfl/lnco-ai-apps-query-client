@@ -8,7 +8,7 @@ import {
   LocalContext,
   MemberFactory,
   PermissionLevel,
-} from '@graasp/sdk';
+} from '@lnco-ai/sdk';
 
 import { buildContext } from '../hooks/postMessage.js';
 import { Database } from '../types.js';

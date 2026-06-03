@@ -1,4 +1,4 @@
-import { Context, LocalContext, PermissionLevel } from '@graasp/sdk';
+import { Context, LocalContext, PermissionLevel } from '@lnco-ai/sdk';
 
 import { setupServer } from 'msw/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';

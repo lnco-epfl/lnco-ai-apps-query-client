@@ -1,4 +1,4 @@
-import { ChatBotMessage, ChatbotRole } from '@graasp/sdk';
+import { ChatBotMessage, ChatbotRole } from '@lnco-ai/sdk';
 
 import { ChatbotThreadMessage } from '../types.js';
 

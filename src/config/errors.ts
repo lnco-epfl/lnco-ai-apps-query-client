@@ -1,5 +1,5 @@
 /* eslint-disable max-classes-per-file */
-import { UUID } from '@graasp/sdk';
+import { UUID } from '@lnco-ai/sdk';
 
 export class MissingTokenError extends Error {
   constructor() {

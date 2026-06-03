@@ -4,7 +4,7 @@
  */
 import { useEffect } from 'react';
 
-import { LocalContext } from '@graasp/sdk';
+import { LocalContext } from '@lnco-ai/sdk';
 
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import debounce from 'lodash.debounce';

@@ -1,4 +1,4 @@
-import { PermissionLevel } from '@graasp/sdk';
+import { PermissionLevel } from '@lnco-ai/sdk';
 
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 

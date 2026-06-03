@@ -3,7 +3,7 @@
  * Provides front-end integration for real-time updates using WebSocket
  * Implements the client protocol from https://github.com/graasp/graasp-websockets
  */
-import { Websocket } from '@graasp/sdk';
+import { Websocket } from '@lnco-ai/sdk';
 
 import { QueryClientConfig } from '../types.js';
 

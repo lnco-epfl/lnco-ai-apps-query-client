@@ -1,4 +1,4 @@
-import { AppAction } from '@graasp/sdk';
+import { AppAction } from '@lnco-ai/sdk';
 
 import { ApiData, Data } from '../types.js';
 import configureAxios from './axios.js';

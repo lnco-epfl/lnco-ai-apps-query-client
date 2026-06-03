@@ -1,4 +1,4 @@
-import { LocalContext } from '@graasp/sdk';
+import { LocalContext } from '@lnco-ai/sdk';
 
 import { QueryClient } from '@tanstack/react-query';
 import { StatusCodes } from 'http-status-codes';

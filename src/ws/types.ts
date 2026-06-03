@@ -1,7 +1,7 @@
 /**
- * All the type definitions should be moved to @graasp/sdk
+ * All the type definitions should be moved to @lnco-ai/sdk
  */
-import { AppAction, AppData, AppSetting, UnionOfConst } from '@graasp/sdk';
+import { AppAction, AppData, AppSetting, UnionOfConst } from '@lnco-ai/sdk';
 
 export enum AppOperations {
   POST = 'post',

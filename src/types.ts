@@ -6,7 +6,7 @@ import {
   DiscriminatedItem,
   Member,
   UUID,
-} from '@graasp/sdk';
+} from '@lnco-ai/sdk';
 
 export type Notifier = (e: {
   type: string;

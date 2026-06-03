@@ -7,7 +7,7 @@ import {
   LocalContext,
   Member,
   PermissionLevel,
-} from '@graasp/sdk';
+} from '@lnco-ai/sdk';
 
 import { HttpResponse, RequestHandler, http } from 'msw';
 import { v4 } from 'uuid';

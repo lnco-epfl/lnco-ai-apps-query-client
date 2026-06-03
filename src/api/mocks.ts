@@ -1,4 +1,4 @@
-import { LocalContext } from '@graasp/sdk';
+import { LocalContext } from '@lnco-ai/sdk';
 
 import { Token } from '../types.js';
 import configureAxios from './axios.js';

@@ -1,4 +1,4 @@
-import { AppAction, AppData, AppSetting } from '@graasp/sdk';
+import { AppAction, AppData, AppSetting } from '@lnco-ai/sdk';
 
 import { afterEach, describe, expect, it } from 'vitest';
 

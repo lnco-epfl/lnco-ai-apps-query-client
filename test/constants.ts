@@ -12,8 +12,7 @@ import {
   LocalContext,
   MemberFactory,
   PermissionLevel,
-} from '@graasp/sdk';
-
+} from '@lnco-ai/sdk';
 import { v4 } from 'uuid';
 
 export const API_HOST = 'http://localhost:3000';

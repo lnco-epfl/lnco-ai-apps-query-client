@@ -17,7 +17,7 @@ import {
   ToggleButtonGroup,
 } from '@mui/material';
 
-import { Context, HttpMethod, LocalContext, Member, PermissionLevel } from '@graasp/sdk';
+import { Context, HttpMethod, LocalContext, Member, PermissionLevel } from '@lnco-ai/sdk';
 
 import { useQueryClient } from '@tanstack/react-query';
 
