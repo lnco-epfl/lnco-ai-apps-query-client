@@ -1,7 +1,7 @@
 {
-  "name": "@graasp/apps-query-client",
-  "version": "3.7.3",
-  "description": "Query client repository for Graasp apps",
+  "name": "@lnco-ai/apps-query-client",
+  "version": "1.0.0",
+  "description": "Query client repository for LNCO.ai apps",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "source": "./src/index.ts",
@@ -16,13 +16,10 @@
     }
   },
   "sideEffects": false,
-  "repository": "git@github.com:graasp/graasp-apps-query-client.git",
-  "author": "Graasp",
+  "repository": "git@github.com:lnco-epfl/lnco-ai-apps-query-client.git",
+  "author": "LNCO-AI-Team",
   "contributors": [
-    "Kim Lan Phan Hoang",
-    "Basile Spaenlehauer",
-    "Jérémy La Scala",
-    "Thibault Reidy"
+    "Yannick Mijsters"
   ],
   "license": "AGPL3.0-only",
   "scripts": {
