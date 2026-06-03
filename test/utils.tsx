@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
-import { HttpMethod } from '@graasp/sdk';
-
+import { HttpMethod } from '@lnco-ai/sdk';
 import { QueryObserverBaseResult, UseMutationResult } from '@tanstack/react-query';
 import { RenderHookOptions, renderHook, waitFor } from '@testing-library/react';
 import { StatusCodes } from 'http-status-codes';
@@ -9,9 +8,9 @@ import nock, { InterceptFunction, ReplyHeaders, Scope } from 'nock';
 import { v4 } from 'uuid';
 import { expect, vi } from 'vitest';
 
+import { DEBOUNCE_TIME_AUTORESIZE } from '../src/config/constants.js';
 import configureHooks from '../src/hooks/index.js';
 import configureQueryClient from '../src/queryClient.js';
-import { DEBOUNCE_TIME_AUTORESIZE } from '../src/config/constants.js';
 import { Notifier, QueryClientConfig } from '../src/types.js';
 import { API_HOST, MOCK_APP_ORIGIN, RequestMethods, WS_HOST } from './constants.js';
 

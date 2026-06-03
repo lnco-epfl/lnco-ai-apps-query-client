@@ -5,7 +5,7 @@ import {
   DiscriminatedItem,
   LocalContext,
   Member,
-} from '@graasp/sdk';
+} from '@lnco-ai/sdk';
 
 import { Dexie } from 'dexie';
 

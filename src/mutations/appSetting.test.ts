@@ -1,4 +1,4 @@
-import { AppSetting } from '@graasp/sdk';
+import { AppSetting } from '@lnco-ai/sdk';
 
 import { act } from '@testing-library/react';
 import { StatusCodes } from 'http-status-codes';

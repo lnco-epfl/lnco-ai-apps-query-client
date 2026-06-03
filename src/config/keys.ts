@@ -1,4 +1,4 @@
-import { UUID } from '@graasp/sdk';
+import { UUID } from '@lnco-ai/sdk';
 
 const APP_SETTING_KEY = 'app-setting';
 const APP_DATA_KEY = 'app-data';

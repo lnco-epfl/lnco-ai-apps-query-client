@@ -1,4 +1,4 @@
-import { AppSetting, appendQueryParamToUrl } from '@graasp/sdk';
+import { AppSetting, appendQueryParamToUrl } from '@lnco-ai/sdk';
 
 import { ApiData, Data } from '../types.js';
 import configureAxios from './axios.js';

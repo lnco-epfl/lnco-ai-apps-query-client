@@ -4,7 +4,7 @@
  */
 import { useEffect } from 'react';
 
-import { AppAction, AppData, AppSetting, UUID } from '@graasp/sdk';
+import { AppAction, AppData, AppSetting, UUID } from '@lnco-ai/sdk';
 
 import { QueryKey, useQueryClient } from '@tanstack/react-query';
 

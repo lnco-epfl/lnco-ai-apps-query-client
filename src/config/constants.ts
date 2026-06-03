@@ -1,4 +1,4 @@
-import { PermissionLevel, ThumbnailSize } from '@graasp/sdk';
+import { PermissionLevel, ThumbnailSize } from '@lnco-ai/sdk';
 
 // -- React Query Configs --
 // time during which cache entry is never refetch

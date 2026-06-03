@@ -1,4 +1,4 @@
-import { ChatBotMessage, GPTVersion } from '@graasp/sdk';
+import { ChatBotMessage, GPTVersion } from '@lnco-ai/sdk';
 
 import { ApiData, ChatBotCompletion } from '../types.js';
 import configureAxios from './axios.js';

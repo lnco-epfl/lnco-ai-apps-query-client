@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/mijsters/Documents/LNCOai/Platform/SDK/src/**)",
+      "Read(//c/Users/mijsters/Documents/LNCOai/Platform/SDK/**)",
+      "Bash(Select-String -Pattern \"version|name\")",
+      "Bash(Select-String -Pattern \"graasp/sdk\")",
+      "Bash(xargs sed -i \"s/@graasp\\\\/sdk/@lnco-ai\\\\/sdk/g\")",
+      "Bash(powershell.exe -Command 'Get-ChildItem -Recurse -Path '\\\\''c:\\\\Users\\\\mijsters\\\\Documents\\\\LNCOai\\\\Platform\\\\Apps Query Client\\\\src'\\\\'' -Include '\\\\''*.ts'\\\\'','\\\\''*.tsx'\\\\'' | ForEach-Object { \\(Get-Content $_.FullName -Raw\\) -replace '\\\\''@graasp/sdk'\\\\'','\\\\''@lnco-ai/sdk'\\\\'' | Set-Content $_.FullName -NoNewline }')"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import { AppData, Member, UUID } from '@graasp/sdk';
+import { AppData, Member, UUID } from '@lnco-ai/sdk';
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 

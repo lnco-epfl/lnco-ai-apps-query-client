@@ -1,4 +1,4 @@
-import { LocalContext } from '@graasp/sdk';
+import { LocalContext } from '@lnco-ai/sdk';
 
 import { SetupWorker, setupWorker } from 'msw/browser';
 

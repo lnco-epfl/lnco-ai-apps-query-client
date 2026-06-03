@@ -7,7 +7,7 @@ import {
   CompleteMember,
   LocalContext,
   MemberFactory,
-} from '@graasp/sdk';
+} from '@lnco-ai/sdk';
 
 import { Factory, Model, Response, RestSerializer, Server, createServer } from 'miragejs';
 import { v4 } from 'uuid';

@@ -1,4 +1,4 @@
-import { ChatBotMessage, GPTVersion } from '@graasp/sdk';
+import { ChatBotMessage, GPTVersion } from '@lnco-ai/sdk';
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 

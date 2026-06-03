@@ -1,4 +1,4 @@
-import { AppSetting } from '@graasp/sdk';
+import { AppSetting } from '@lnco-ai/sdk';
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
